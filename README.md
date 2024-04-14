@@ -1,5 +1,5 @@
 # AutoFileSort
 
-This Python script organizes files downloaded into a specified directory (downloads) into different folders based on their types. It categorizes files into video, image, and document folders (video_directory, image_directory, documents_directory). Additionally, if the file is downloaded from the "Canvas" website, it moves them to corresponding folders in the "uni" directories (uni_videos, uni_photos, uni_documents). 
+This script automatically categorizes files downloaded into a designated directory (downloads) into folders based on their types (videos, images, documents). It also detects if a file is university-related, such as those downloaded from platforms like 'Canvas', and sorts them into specific folders within the 'uni' directories.
 
-The script uses macOS metadata to identify the source website of each file and then moves them accordingly using the watchdog library to monitor changes in the downloads directory.
+It utilizes macOS metadata to identify the source website of each file and monitors changes in the download directory using the watchdog library."
