@@ -12,9 +12,9 @@ source_dir = "/Users/mateivolanschi/Downloads"
 video_directory = "/Users/mateivolanschi/Desktop/videos"
 image_directory= "/Users/mateivolanschi/Desktop/images"
 documents_directory = "/Users/mateivolanschi/Desktop/documents"
-uni_documents = "/Users/mateivolanschi/Desktop/uni documents"
-uni_videos="/Users/mateivolanschi/Desktop/uni videos"
-uni_photos="/Users/mateivolanschi/Desktop/uni images"
+uni_documents_directory = "/Users/mateivolanschi/Desktop/uni documents"
+uni_videos_directory ="/Users/mateivolanschi/Desktop/uni videos"
+uni_image_directory ="/Users/mateivolanschi/Desktop/uni images"
 
 
 # image types
@@ -76,7 +76,7 @@ class MoverHandler(FileSystemEventHandler):
         for video_extension in video_extensions:
             if name.endswith(video_extension) or name.endswith(video_extension.upper()):
                 if check_website_from(get_where_from(entry.path)):
-                    move_file(uni_videos, entry, name)
+                    move_file(uni_videos_directory, entry, name)
                 else:
                     move_file(video_directory, entry, name)
                     logging.info(f"Moved video file: {name}")
@@ -85,7 +85,7 @@ class MoverHandler(FileSystemEventHandler):
         for image_extension in image_extensions:
             if name.endswith(image_extension) or name.endswith(image_extension.upper()):
                 if check_website_from(get_where_from(entry.path)):
-                    move_file(uni_photos, entry, name)
+                    move_file(uni_image_directory, entry, name)
                 else:
                     move_file(image_directory, entry, name)
                     logging.info(f"Moved image file: {name}")
@@ -94,7 +94,7 @@ class MoverHandler(FileSystemEventHandler):
         for documents_extension in document_extensions:
             if name.endswith(documents_extension) or name.endswith(documents_extension.upper()):
                 if check_website_from(get_where_from(entry.path)):
-                    move_file(uni_documents, entry, name)
+                    move_file(uni_documents_directory, entry, name)
                 else:
                     move_file(documents_directory, entry, name)
                     logging.info(f"Moved document file: {name}")
