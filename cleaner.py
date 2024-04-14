@@ -7,6 +7,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import subprocess
 
+# replace with your directories of choice
 source_dir = "/Users/mateivolanschi/Downloads"
 video_directory = "/Users/mateivolanschi/Desktop/videos"
 image_directory= "/Users/mateivolanschi/Desktop/images"
